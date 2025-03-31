@@ -509,6 +509,159 @@ body {
     }
 }
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Navbar Mobile */
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+    .emergency-contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .emergency-contact .phone-number {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero Section Mobile */
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+        justify-content: center;
+    }
+
+    /* Features Mobile */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Services Mobile */
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        margin: 0.5rem 0;
+    }
+
+    /* About Section Mobile */
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .about-image {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Contact Section Mobile */
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    /* General Mobile Adjustments */
+    .container {
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .feature-card, 
+    .service-card, 
+    .benefit-card {
+        padding: 1.25rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+}
+
 /* Add these new animations */
 @keyframes pulse {
     0% {
