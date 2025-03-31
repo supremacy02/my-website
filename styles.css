@@ -492,6 +492,10 @@ body {
         font-size: 16px;
     }
 
+    .navbar .emergency-contact {
+        display: none; /* Hide the top phone button on mobile */
+    }
+
     /* Hero Section Mobile Fixes */
     .hero {
         padding: 100px 0 40px;
