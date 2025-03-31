@@ -82,17 +82,79 @@ body {
 .emergency-contact .phone-number {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background: var(--gradient-primary);
+    background: #0095ff;
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .emergency-contact .phone-number:hover {
     transform: translateY(-2px);
-    background: #0066dd;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .logo a {
+        font-size: 1.4rem;
+    }
+
+    /* Hide navigation menu on mobile */
+    .nav-links {
+        display: none !important;
+    }
+
+    .emergency-contact {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .emergency-contact .phone-number {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        font-size: 1.1rem;
+        background: #0095ff;
+    }
+
+    /* Hero section mobile adjustments */
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
 }
 
 /* Hero Section */
@@ -107,6 +169,8 @@ body {
 
 .hero-content {
     max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .hero h1 {
@@ -120,6 +184,64 @@ body {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.btn i {
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background: #0095ff;
+    color: white;
+}
+
+.btn-secondary {
+    background: #ffd700;
+    color: #1A202C;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        font-size: 1.1rem;
+    }
 }
 
 /* Buttons */
