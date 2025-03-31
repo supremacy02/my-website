@@ -467,42 +467,132 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* Desktop (default styles above) */
+
+/* Mobile Devices (iPhone and Samsung) */
+@media screen and (max-width: 767px) {
+    /* Navigation */
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
     .nav-links {
-        display: none;
+        display: none; /* Hide nav links on mobile */
     }
 
     .logo a {
         font-size: 1.2rem;
     }
 
+    .emergency-contact .phone-number {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 120px 0 60px;
+        text-align: center;
+    }
+
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
     }
 
-    .feature-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
-    .footer-content {
+    .cta-buttons {
         flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+        align-items: center;
     }
 
-    .footer-info {
-        text-align: center;
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 1rem;
+        padding: 0.8rem 1rem;
+    }
+
+    /* Features and Services */
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .feature-card,
+    .service-card {
+        padding: 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
-    .feature-grid {
-        grid-template-columns: 1fr;
+/* iPhone specific adjustments */
+@media screen and (max-width: 390px) {
+    .logo a {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .emergency-contact .phone-number {
+        font-size: 0.9rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Samsung/Large phones specific adjustments */
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .emergency-contact .phone-number {
+        padding: 0.8rem 1.2rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.2rem;
+    }
+}
+
+/* Tablets - For better transition between mobile and desktop */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .feature-grid,
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Desktop screens */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
     }
 }
 
