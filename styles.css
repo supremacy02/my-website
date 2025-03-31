@@ -126,51 +126,100 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    min-width: 200px;
+    border: none;
 }
 
 .btn i {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: #0095ff;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #0066dd;
+    background: #0085ee;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background: #FFC107;
+    background: #ffd700;
     color: #1A202C;
 }
 
 .btn-secondary:hover {
-    background: #FFB300;
+    background: #ffcd00;
     transform: translateY(-2px);
-    color: #1A202C;
 }
 
 .cta-buttons {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
 }
 
-.pulse-button {
-    animation: pulse 2s infinite;
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 140px 0 60px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 1rem 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .emergency-contact .phone-number {
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        background: #0095ff;
+    }
 }
 
-.hover-float:hover {
-    animation: float 2s infinite;
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Features Section */
