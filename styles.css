@@ -544,6 +544,36 @@ body {
     .btn i {
         margin-right: 8px;
     }
+
+    /* Features Section Mobile Fix */
+    .feature-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .feature-card {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 350px;
+    }
+
+    /* Make sure icons and text are properly centered */
+    .feature-card .icon-circle {
+        margin: 0 auto 15px auto;
+    }
+
+    .feature-card h3 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .feature-card p {
+        text-align: center;
+        margin: 0;
+    }
 }
 
 /* Small Mobile Devices */
