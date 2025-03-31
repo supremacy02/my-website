@@ -428,45 +428,61 @@ body {
 @media (max-width: 1024px) {
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 0 15px;
+    }
+
+    .benefit-card {
+        padding: 1.5rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 640px) {
+    .why-choose-us {
+        padding: 40px 0;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        padding: 0 15px;
+    }
+
     .benefits-grid {
         grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 1rem;
     }
-    
-    .why-choose-us h2 {
-        font-size: 2rem;
+
+    .benefit-card {
+        padding: 1.5rem;
+        margin: 0 15px;
+    }
+
+    .benefit-card i {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 }
 
-/* Footer */
-.footer {
-    background: var(--dark-color);
-    color: white;
-    padding: 40px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.footer-info {
-    text-align: right;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -532,4 +548,29 @@ body {
     100% {
         transform: translateY(0px);
     }
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.footer-info {
+    text-align: right;
 }
