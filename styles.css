@@ -19,9 +19,11 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
+    overflow-x: hidden;
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -41,23 +43,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo a {
     color: var(--dark-color);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .nav-links a {
     color: var(--dark-color);
     text-decoration: none;
-    margin-left: 2rem;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+    font-size: 0.9rem;
 }
 
 .nav-links a::after {
@@ -81,13 +90,14 @@ body {
 
 .emergency-contact .phone-number {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
+    padding: 0.6rem 1.2rem;
     background: var(--gradient-primary);
     color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .emergency-contact .phone-number:hover {
@@ -97,7 +107,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 180px 0 100px;
+    padding: 120px 0 60px;
     background: 
         linear-gradient(135deg, rgba(0, 119, 255, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%),
         url('pattern.svg') repeat;
@@ -106,18 +116,19 @@ body {
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 100%;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.2;
     margin-bottom: 1.5rem;
     color: var(--dark-color);
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: #666;
     margin-bottom: 2rem;
 }
@@ -126,51 +137,26 @@ body {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    width: fit-content;
 }
 
 .btn i {
     font-size: 1.1rem;
 }
 
-.btn-primary {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #0066dd;
-    transform: translateY(-2px);
-}
-
-.btn-secondary {
-    background: #FFC107;
-    color: #1A202C;
-}
-
-.btn-secondary:hover {
-    background: #FFB300;
-    transform: translateY(-2px);
-    color: #1A202C;
-}
-
 .cta-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
-}
-
-.pulse-button {
-    animation: pulse 2s infinite;
-}
-
-.hover-float:hover {
-    animation: float 2s infinite;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Features Section */
@@ -428,97 +414,108 @@ body {
 @media (max-width: 1024px) {
     .benefits-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        padding: 0 15px;
-    }
-
-    .benefit-card {
-        padding: 1.5rem;
-    }
-
-    .benefit-card h3 {
-        font-size: 1.1rem;
-    }
-
-    .benefit-card p {
-        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 640px) {
-    .why-choose-us {
-        padding: 40px 0;
-    }
-
-    .why-choose-us h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-        padding: 0 15px;
-    }
-
     .benefits-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        gap: 1rem;
-    }
-
-    .benefit-card {
-        padding: 1.5rem;
-        margin: 0 15px;
-    }
-
-    .benefit-card i {
-        font-size: 1.75rem;
-        margin-bottom: 1rem;
-    }
-
-    .benefit-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .benefit-card p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .logo a {
-        font-size: 1.2rem;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .feature-grid {
         grid-template-columns: 1fr;
     }
     
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-    }
-
-    .footer-info {
-        text-align: center;
+    .why-choose-us h2 {
+        font-size: 2rem;
     }
 }
 
-@media (max-width: 768px) {
+/* Footer */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .emergency-contact {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
     .feature-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hero {
+        padding: 100px 0 40px;
+    }
+
+    .feature-card, .service-card {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo a {
+        font-size: 1.1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .emergency-contact .phone-number {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -548,29 +545,4 @@ body {
     100% {
         transform: translateY(0px);
     }
-}
-
-/* Footer */
-.footer {
-    background: var(--dark-color);
-    color: white;
-    padding: 40px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.footer-info {
-    text-align: right;
 }
