@@ -144,28 +144,72 @@
         </div>
     </section>
 
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <div class="quote-form-container" data-aos="fade-up">
+                <h2>Request a Quote</h2>
+                <form id="quoteForm" class="quote-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Your Name<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter Your Name..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Phone Number<span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter Your Number..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter Your Email Address..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="suburb">Suburb<span class="required">*</span></label>
+                            <input type="text" id="suburb" name="suburb" placeholder="Enter Your Suburb..." required>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="service">Required Service?<span class="required">*</span></label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose Your Service</option>
+                            <option value="emergency">Emergency Electrical Service</option>
+                            <option value="residential">Residential Electrical Service</option>
+                            <option value="commercial">Commercial Electrical Service</option>
+                            <option value="maintenance">Electrical Maintenance</option>
+                            <option value="installation">New Installation</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Leave A Message For Us" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
                 <h2>Contact Us</h2>
                 <p>Available 24/7 for all your electrical needs</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <h3>Call Us</h3>
-                            <p>0461 247 247</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <h3>Hours</h3>
-                            <p>24/7 Emergency Service</p>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Service Area</h3>
-                            <p>Sydney Region</p>
-                        </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Call Us</h3>
+                        <p>0461 247 247</p>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Hours</h3>
+                        <p>24/7 Emergency Service</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Service Area</h3>
+                        <p>Sydney Region</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -173,13 +217,13 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                        <div class="footer-logo">
-                            <a href="#home">EVAREADY ELECTRICAL</a>
-                        </div>
-                        <div class="footer-info">
-                            <p>&copy; 2024 EVAREADY ELECTRICAL. All rights reserved.</p>
-                        </div>
-                    </div>
+                <div class="footer-logo">
+                    <a href="#home">EVAREADY ELECTRICAL</a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 EVAREADY ELECTRICAL. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
