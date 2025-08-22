@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
     <script>
         window.onload = function() {
             window.scrollTo(0, 0);
@@ -16,11 +17,23 @@
     </script>
 </head>
 <body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="site-bg" aria-hidden="true">
+        <canvas id="bg-stars"></canvas>
+        <canvas id="bg-lightning"></canvas>
+    </div>
     <nav class="navbar">
         <div class="container">
             <div class="logo" data-aos="fade-right">
                 <a href="#home">EVAREADY ELECTRICAL</a>
             </div>
+            <button class="burger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="nav-links" data-aos="fade-down">
                 <a href="#home">Home</a>
                 <a href="#services">Services</a>
@@ -30,23 +43,36 @@
             <div class="emergency-contact" data-aos="fade-left">
                 <a href="tel:0461247247" class="phone-number">
                     <i class="fas fa-phone-alt"></i>
-                    0461 247 247
+                    CALL NOW<br>0461 247 247
                 </a>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="mobile-menu-inner">
+            <a class="mobile-link" href="#home">Home</a>
+            <a class="mobile-link" href="#services">Services</a>
+            <a class="mobile-link" href="#about">About</a>
+            <a class="mobile-link" href="#contact">Contact</a>
+            <a class="btn btn-primary mobile-call" href="tel:0461247247">
+                <i class="fas fa-phone-alt"></i> Call 0461 247 247
+            </a>
+        </div>
+    </div>
+
     <header id="home" class="hero">
         <div class="container">
             <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <h1>Your Trusted 24/7 Electrical Service in Sydney</h1>
+                <h1 class="headline neon" id="headline"><span>Your Trusted 24/7 Electrical Service in Sydney</span></h1>
                 <p>Professional, reliable electrical services when you need them most</p>
                 <div class="cta-buttons">
-                    <a href="tel:0461247247" class="btn btn-primary pulse-button">
+                    <a href="tel:0461247247" class="btn btn-primary pulse-button tilt" data-tilt>
                         <i class="fas fa-phone-alt"></i>
                         Emergency Call
                     </a>
-                    <a href="javascript:void(0)" onclick="document.getElementById('quote').scrollIntoView({behavior: 'smooth'})" class="btn btn-secondary hover-float">
+                    <a href="javascript:void(0)" onclick="document.getElementById('quote').scrollIntoView({behavior: 'smooth'})" class="btn btn-secondary hover-float tilt" data-tilt>
                         <i class="fas fa-file-invoice-dollar"></i> Get a Quote
                     </a>
                 </div>
@@ -59,17 +85,17 @@
             <div class="feature-grid">
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-circle">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Accredited Level 2 ASP</h3>
-                    <p>Licensed and certified Level 2 ASP electrical service provider in Sydney</p>
-                </div>
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="icon-circle">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <h3>24/7 Emergency Service</h3>
                     <p>Fast response within 60 minutes or it's free</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-circle">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Accredited Level 2 ASP</h3>
+                    <p>Licensed and certified Level 2 ASP electrical service provider in Sydney</p>
                 </div>
                 <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="icon-circle">
@@ -81,6 +107,13 @@
             </div>
         </div>
     </section>
+
+    <!-- Lightning bolt divider between Features and Services -->
+    <div class="section-divider bolt-divider" aria-hidden="true">
+        <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+        </svg>
+    </div>
 
     <section id="services" class="services">
         <div class="container">
@@ -110,6 +143,11 @@
 
     <section id="why-choose-us" class="why-choose-us">
         <div class="container">
+            <div class="section-divider bolt-divider" aria-hidden="true">
+                <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+                </svg>
+            </div>
             <h2>Why Choose EVAREADY ELECTRICAL?</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
@@ -138,6 +176,11 @@
 
     <section id="service-areas" class="service-areas">
         <div class="container">
+            <div class="section-divider bolt-divider" aria-hidden="true">
+                <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+                </svg>
+            </div>
             <h2>Our Service Areas</h2>
             <p class="section-subtitle">Proudly Serving Sydney and Surrounding Regions</p>
             <div class="service-areas-grid">
@@ -193,6 +236,13 @@
         </div>
     </section>
 
+    <!-- Lightning bolt divider between Service Areas and About -->
+    <div class="section-divider bolt-divider" aria-hidden="true">
+        <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+        </svg>
+    </div>
+
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
@@ -206,18 +256,13 @@
             </div>
         </div>
     </section>
-
     <section id="quote" class="quote-section">
         <div class="quote-outer-container">
             <div class="quote-white-box">
                 <h2>Request a Quote</h2>
-                <form id="quoteForm" class="quote-form">
+                <form class="quote-form">
                     <div class="form-row">
-                        <label>Your Name*</label>
-                        <input type="text" placeholder="Enter Your Name..." required>
-                    </div>
-                    <div class="form-row">
-                        <label>Your Phone Number*</label>
+                        <label>Phone Number*</label>
                         <input type="tel" placeholder="Enter Your Number..." required>
                     </div>
                     <div class="form-row">
@@ -243,22 +288,32 @@
                         <label>Message</label>
                         <textarea placeholder="Leave A Message For Us" rows="4"></textarea>
                     </div>
-                    <button type="submit">Book Now</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-file-invoice-dollar"></i> Get Free Quote</button>
                 </form>
             </div>
+            <aside class="call-card" aria-labelledby="call-now-title">
+                <h3 id="call-now-title">Don't Risk Your Safety</h3>
+                <p>Electrical emergencies can't wait. Our certified experts are EVAREADY 24/7 to keep you safe.</p>
+                <a href="tel:0461247247" class="btn btn-danger pulse-button"><i class="fas fa-phone-alt"></i> CALL NOW</a>
+            </aside>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
+                <div class="section-divider bolt-divider" aria-hidden="true">
+                    <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+                        <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+                    </svg>
+                </div>
                 <h2>Contact Us</h2>
                 <p>Available 24/7 for all your electrical needs</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
                         <h3>Call Us</h3>
-                        <p>0461 247 247</p>
+                        <p><a href="tel:0461247247" aria-label="Call EVAREADY ELECTRICAL on 0461 247 247">0461 247 247</a></p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
@@ -278,11 +333,38 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home">EVAREADY ELECTRICAL</a>
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a class="brand" href="#home">EVAREADY ELECTRICAL</a>
+                        <p>Your trusted 24/7 electricians across Sydney.</p>
+                    </div>
+                    <div class="footer-col footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#services"><i class="fas fa-bolt"></i> Services</a></li>
+                            <li><a href="#why-choose"><i class="fas fa-check-circle"></i> Why Choose Us</a></li>
+                            <li><a href="#service-areas"><i class="fas fa-map-marker-alt"></i> Service Areas</a></li>
+                            <li><a href="#about"><i class="fas fa-users"></i> About</a></li>
+                            <li><a href="#quote"><i class="fas fa-file-invoice-dollar"></i> Request a Quote</a></li>
+                            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col footer-contact">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:0461247247">0461 247 247</a></li>
+                            <li><i class="fas fa-clock"></i> 24/7 Emergency Service</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Sydney Region</li>
+                        </ul>
+                        <div class="social">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-info">
-                    <p>&copy; 2024 EVAREADY ELECTRICAL. All rights reserved.</p>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 EVAREADY ELECTRICAL. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -296,5 +378,6 @@
             offset: 100
         });
     </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
