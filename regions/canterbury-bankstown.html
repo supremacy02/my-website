@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canterbury–Bankstown Service Areas | EVAREADY ELECTRICAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://fonts.cdnfonts.com/css/ethnocentric" rel="stylesheet">
+</head>
+<body class="region-detail">
+  <div class="site-bg" aria-hidden="true">
+    <canvas id="bg-stars"></canvas>
+    <canvas id="bg-lightning"></canvas>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="../index.html#home">EVAREADY ELECTRICAL</a>
+      </div>
+      <button class="burger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#service-areas">Service Areas</a>
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="emergency-contact">
+        <a href="tel:0461247247" class="phone-number">
+          <i class="fas fa-phone-alt"></i>
+          CALL NOW<br>0461 247 247
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-divider bolt-divider" aria-hidden="true">
+          <svg class="bolt" width="56" height="56" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+            <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="page-header">
+          <h1>Canterbury–Bankstown</h1>
+          <p class="lead">24/7 Emergency Electricians servicing Canterbury–Bankstown within ~90 minutes. Click a suburb below for fast service.</p>
+        </div>
+
+        <div class="suburb-list">
+          <!-- Sample list; we can expand fully on your confirmation -->
+          <div class="suburb-item"><a href="#"><span>Bankstown</span><small>2200</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Greenacre</span><small>2190</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Belmore</span><small>2192</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Earlwood</span><small>2206</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Campsie</span><small>2194</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Punchbowl</span><small>2196</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Yagoona</span><small>2199</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Padstow</span><small>2211</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Revesby</span><small>2212</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Panania</span><small>2213</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Condell Park</span><small>2200</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Chullora</span><small>2190</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Lakemba</span><small>2195</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Wiley Park</span><small>2195</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Riverwood</span><small>2210</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Hurlstone Park</span><small>2193</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Mount Lewis</span><small>2190</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Georges Hall</span><small>2198</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Birrong</span><small>2143</small></a></div>
+          <div class="suburb-item"><a href="#"><span>Sefton</span><small>2162</small></a></div>
+        </div>
+
+        <div style="margin-top:24px; text-align:center;">
+          <a class="btn btn-primary no-hover" href="tel:0461247247"><i class="fas fa-phone-alt"></i> Emergency Electrician Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> EVAREADY ELECTRICAL. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <div class="mobile-menu-inner" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
+      <h3 id="mobile-menu-title" class="visually-hidden">Mobile Menu</h3>
+      <a class="mobile-link" href="../index.html#home">Home</a>
+      <a class="mobile-link" href="../index.html#about">About</a>
+      <a class="mobile-link" href="../index.html#service-areas">Service Areas</a>
+      <a class="mobile-link" href="../index.html#services">Services</a>
+      <a class="mobile-link" href="../index.html#contact">Contact</a>
+      <a class="mobile-link" href="../index.html#quote">Request a Quote</a>
+      <a class="btn btn-primary mobile-call" href="tel:0461247247"><i class="fas fa-phone-alt"></i> Call 0461 247 247</a>
+    </div>
+  </div>
+
+  <script src="../scripts.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
